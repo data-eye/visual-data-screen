@@ -24,7 +24,9 @@
           <div class="left3">
             <total-device :data="deviceData" />
           </div>
-          <div class="left4"></div>
+          <div class="left4">
+            <total-gender :data="userData.gender" />
+          </div>
           <div class="left5"></div>
           <div class="left6"></div>
         </div>
@@ -56,6 +58,7 @@ import Container from "../../components/Container";
 import TotalUser from "../../components/TotalUser";
 import AverageAge from "../../components/AverageAge";
 import TotalDevice from "../../components/TotalDevice";
+import TotalGender from "../../components/TotalGender";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -65,6 +68,7 @@ export default {
     TotalUser,
     AverageAge,
     TotalDevice,
+    TotalGender,
   },
   setup() {
     const context = getCurrentInstance().ctx;
