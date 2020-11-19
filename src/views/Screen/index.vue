@@ -21,7 +21,9 @@
               ref="averageAge"
             />
           </div>
-          <div class="left3"></div>
+          <div class="left3">
+            <total-device :data="deviceData" />
+          </div>
           <div class="left4"></div>
           <div class="left5"></div>
           <div class="left6"></div>
@@ -53,6 +55,7 @@ import Loading from "../../components/Loading";
 import Container from "../../components/Container";
 import TotalUser from "../../components/TotalUser";
 import AverageAge from "../../components/AverageAge";
+import TotalDevice from "../../components/TotalDevice";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -61,6 +64,7 @@ export default {
     Container,
     TotalUser,
     AverageAge,
+    TotalDevice,
   },
   setup() {
     const context = getCurrentInstance().ctx;
