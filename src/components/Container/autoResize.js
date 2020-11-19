@@ -15,7 +15,7 @@ export default {
   mounted() {
     this.autoResizeMixinInit();
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.unbindDomResizeCallback();
   },
   methods: {
