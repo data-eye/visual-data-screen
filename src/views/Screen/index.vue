@@ -6,8 +6,21 @@
       <div class="separator-wrapper"></div>
       <div class="center">
         <div class="left">
-          <div class="left1"></div>
-          <div class="left2"></div>
+          <div class="left1">
+            <total-user
+              :today-user="userData.userToday"
+              :growth-last-day="+userData.userGrowthLastDay || 0"
+              :growth-last-month="+userData.userGrowthLastMonth || 0"
+              ref="totalUser"
+            />
+          </div>
+          <div class="left2">
+            <average-age
+              :data="ageData"
+              :avg-age="+userData.averageAge || 0"
+              ref="averageAge"
+            />
+          </div>
           <div class="left3"></div>
           <div class="left4"></div>
           <div class="left5"></div>
@@ -38,13 +51,16 @@
 import { getCurrentInstance } from "vue";
 import Loading from "../../components/Loading";
 import Container from "../../components/Container";
-
+import TotalUser from "../../components/TotalUser";
+import AverageAge from "../../components/AverageAge";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
   components: {
     Loading,
     Container,
+    TotalUser,
+    AverageAge,
   },
   setup() {
     const context = getCurrentInstance().ctx;
