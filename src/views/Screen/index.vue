@@ -35,17 +35,37 @@
           </div>
         </div>
         <div class="right">
-          <div class="right-top1"></div>
-          <div class="right-top2"></div>
+          <div class="right-top1">
+            <center-header :data="userData" />
+          </div>
+          <div class="right-top2">
+            <country-category
+              :data="['ALL', '北京', '上海', '深圳', '杭州', '南京', '武汉']"
+            />
+          </div>
           <div class="right-bottom">
             <div class="right-left">
               <div class="right-left1"></div>
-              <div class="right-left2"></div>
+              <div class="right-left2">
+                <country-category
+                  :data="[
+                    'ALL',
+                    '北京',
+                    '上海',
+                    '深圳',
+                    '杭州',
+                    '南京',
+                    '武汉',
+                  ]"
+                />
+              </div>
               <div class="right-left3"></div>
               <div class="right-left4"></div>
             </div>
             <div class="right-right">
-              <div class="right-right1"></div>
+              <div class="right-right1">
+                <plan-list :data="userData.areaSales" />
+              </div>
               <div class="right-right2"></div>
             </div>
           </div>
@@ -65,6 +85,9 @@ import TotalDevice from "../../components/TotalDevice";
 import TotalGender from "../../components/TotalGender";
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
+import CenterHeader from "../../components/CenterHeader";
+import PlanList from "../../components/PlanList";
+import CountryCategory from "../../components/CountryCategory";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -77,6 +100,9 @@ export default {
     TotalGender,
     LineChart,
     BarChart,
+    CenterHeader,
+    PlanList,
+    CountryCategory,
   },
   setup() {
     const context = getCurrentInstance().ctx;
