@@ -70,7 +70,9 @@
                   <average-view :data="realTimeOrder" />
                 </dv-border-box-8>
               </div>
-              <div class="right-left4"></div>
+              <div class="right-left4">
+                <schedule-view />
+              </div>
             </div>
             <div class="right-right">
               <div class="right-right1">
@@ -99,6 +101,7 @@ import BarChart from "../../components/BarChart";
 import CenterHeader from "../../components/CenterHeader";
 import PlanList from "../../components/PlanList";
 import AverageView from "../../components/AverageView";
+import ScheduleView from "../../components/ScheduleView";
 import CountryCategory from "../../components/CountryCategory";
 import Earth from "../../components/Earth";
 import { useScreenData } from "../../hooks/useScreenData";
@@ -117,6 +120,7 @@ export default {
     CenterHeader,
     PlanList,
     AverageView,
+    ScheduleView,
     CountryCategory,
     Earth,
   },
