@@ -30,7 +30,9 @@
           <div class="left5">
             <line-chart :data="userData.rider" />
           </div>
-          <div class="left6"></div>
+          <div class="left6">
+            <bar-chart :data="userData.category" />
+          </div>
         </div>
         <div class="right">
           <div class="right-top1"></div>
@@ -62,6 +64,7 @@ import AverageAge from "../../components/AverageAge";
 import TotalDevice from "../../components/TotalDevice";
 import TotalGender from "../../components/TotalGender";
 import LineChart from "../../components/LineChart";
+import BarChart from "../../components/BarChart";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -73,6 +76,7 @@ export default {
     TotalDevice,
     TotalGender,
     LineChart,
+    BarChart,
   },
   setup() {
     const context = getCurrentInstance().ctx;
