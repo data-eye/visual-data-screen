@@ -78,7 +78,9 @@
               <div class="right-right1">
                 <plan-list :data="userData.areaSales" />
               </div>
-              <div class="right-right2"></div>
+              <div class="right-right2">
+                <activate-user :data="userData.areaTop" />
+              </div>
             </div>
           </div>
         </div>
@@ -104,6 +106,7 @@ import AverageView from "../../components/AverageView";
 import ScheduleView from "../../components/ScheduleView";
 import CountryCategory from "../../components/CountryCategory";
 import Earth from "../../components/Earth";
+import ActivateUser from "../../components/ActivateUser";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -123,6 +126,7 @@ export default {
     ScheduleView,
     CountryCategory,
     Earth,
+    ActivateUser,
   },
   setup() {
     const context = getCurrentInstance().ctx;
