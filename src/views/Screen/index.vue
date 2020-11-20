@@ -45,7 +45,9 @@
           </div>
           <div class="right-bottom">
             <div class="right-left">
-              <div class="right-left1"></div>
+              <div class="right-left1">
+                <earth :data="mapData" />
+              </div>
               <div class="right-left2">
                 <country-category
                   :data="[
@@ -88,6 +90,7 @@ import BarChart from "../../components/BarChart";
 import CenterHeader from "../../components/CenterHeader";
 import PlanList from "../../components/PlanList";
 import CountryCategory from "../../components/CountryCategory";
+import Earth from "../../components/Earth";
 import { useScreenData } from "../../hooks/useScreenData";
 export default {
   name: "Screen",
@@ -103,6 +106,7 @@ export default {
     CenterHeader,
     PlanList,
     CountryCategory,
+    Earth,
   },
   setup() {
     const context = getCurrentInstance().ctx;
