@@ -1,8 +1,8 @@
 <template>
   <div id="screen-container" :ref="ref">
-    <div v-if="ready">
+    <template v-if="ready">
       <slot></slot>
-    </div>
+    </template>
   </div>
 </template>
 

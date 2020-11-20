@@ -2,7 +2,9 @@
   <div class="container">
     <loading v-if="!ready">loading...</loading>
     <container :options="{ width: 3840, height: 2160 }" v-else>
-      <div class="header"></div>
+      <div class="header">
+        <top-header />
+      </div>
       <div class="separator-wrapper"></div>
       <div class="center">
         <div class="left">
@@ -61,7 +63,13 @@
                   ]"
                 />
               </div>
-              <div class="right-left3"></div>
+              <div class="right-left3">
+                <dv-border-box-8
+                  :color="['rgb(66, 68, 70)', 'rgb(251,253,142)']"
+                >
+                  <average-view :data="realTimeOrder" />
+                </dv-border-box-8>
+              </div>
               <div class="right-left4"></div>
             </div>
             <div class="right-right">
@@ -81,6 +89,7 @@
 import { getCurrentInstance } from "vue";
 import Loading from "../../components/Loading";
 import Container from "../../components/Container";
+import TopHeader from "../../components/TopHeader";
 import TotalUser from "../../components/TotalUser";
 import AverageAge from "../../components/AverageAge";
 import TotalDevice from "../../components/TotalDevice";
@@ -89,6 +98,7 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import CenterHeader from "../../components/CenterHeader";
 import PlanList from "../../components/PlanList";
+import AverageView from "../../components/AverageView";
 import CountryCategory from "../../components/CountryCategory";
 import Earth from "../../components/Earth";
 import { useScreenData } from "../../hooks/useScreenData";
@@ -97,6 +107,7 @@ export default {
   components: {
     Loading,
     Container,
+    TopHeader,
     TotalUser,
     AverageAge,
     TotalDevice,
@@ -105,6 +116,7 @@ export default {
     BarChart,
     CenterHeader,
     PlanList,
+    AverageView,
     CountryCategory,
     Earth,
   },
